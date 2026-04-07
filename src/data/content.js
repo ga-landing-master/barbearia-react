@@ -1,8 +1,8 @@
 export const business = {
   name: 'Barbearia Dom',
-  tagline: 'Corte Afiado. Zero Enrolação.',
+  tagline: 'Navalha afiada, blues na caixa.',
   description:
-    'Na Dom, homem não fica esperando. Pontualidade, cerveja gelada na mão e barbeiro que sabe o que faz. Sem frescura, sem enrolação — só resultado.',
+    'A Dom é onde o homem chega, pede uma cerveja, senta na cadeira de couro e sai com o corte que merece. Sem pressa, sem frescura — com blues tocando e navalha na mão.',
   whatsapp: '5511999999999',
   whatsappMessage: 'E aí, quero agendar um horário na Dom.',
   address: 'Rua da Consolação, 1200 — Consolação, São Paulo',
@@ -26,14 +26,14 @@ export const business = {
     },
     {
       icon: 'Crown',
-      title: 'Combo Bruto',
-      description: 'Corte + barba + sobrancelha. O pacote completo pra quem não faz nada pela metade.',
+      title: 'Combo Completo',
+      description: 'Corte + barba + sobrancelha. O pacote pra quem não faz nada pela metade.',
       price: 'R$ 95',
     },
     {
       icon: 'Flame',
       title: 'Pigmentação',
-      description: 'Cabelo branco te incomodando? A gente resolve. Resultado natural, ninguém percebe.',
+      description: 'Cabelo branco te incomodando? A gente resolve. Resultado natural.',
       price: 'R$ 50',
     },
     {
@@ -53,13 +53,13 @@ export const business = {
   diferenciais: [
     {
       icon: 'Beer',
-      title: 'Cerveja na Faixa',
+      title: 'Cerveja Gelada',
       description: 'Chegou, sentou, gelou. Cortesia da casa.',
     },
     {
       icon: 'Wifi',
-      title: 'Wi-Fi Potente',
-      description: 'Internet que não trava. Resolve o trampo enquanto espera.',
+      title: 'Wi-Fi Livre',
+      description: 'Internet boa pra resolver o trampo enquanto espera.',
     },
     {
       icon: 'Tv',
@@ -68,25 +68,25 @@ export const business = {
     },
     {
       icon: 'Clock',
-      title: 'Sem Espera',
-      description: 'Hora marcada é hora marcada. Chegou, sentou na cadeira.',
+      title: 'Hora Marcada',
+      description: 'Pontualidade é lei. Chegou no horário, sentou na cadeira.',
     },
   ],
 
   testimonials: [
     {
       name: 'Rafael M.',
-      text: 'Melhor barbearia que já pisei. Cerveja gelada, corte sinistro e os caras não enrolam.',
+      text: 'Melhor barbearia que já pisei. Cerveja gelada, blues tocando e corte sinistro. Virei de casa.',
       rating: 5,
     },
     {
       name: 'Lucas T.',
-      text: 'Fui uma vez e nunca mais larguei. Corte perfeito, ambiente de responsa e atendimento brabo.',
+      text: 'Ambiente de responsa, parece um bar americano. E o corte? Impecável toda vez.',
       rating: 5,
     },
     {
       name: 'André P.',
-      text: 'Pontualidade absurda, barba afiada e resultado impecável. Aqui é outro nível.',
+      text: 'Pontualidade absurda, barba afiada e resultado que fala por si. Aqui é outro nível.',
       rating: 5,
     },
   ],

@@ -10,119 +10,112 @@ export function Hero() {
       id="inicio"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Pure black */}
-      <div className="absolute inset-0 bg-black" />
+      {/* Deep midnight blue */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#071018] via-[#0B1622] to-[#0E1A2B]" />
 
-      {/* Industrial grid — heavy lines */}
-      <div
-        className="absolute inset-0 opacity-[0.12]"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(255,204,0,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,204,0,0.6) 1px, transparent 1px)',
-          backgroundSize: '40px 40px',
-        }}
-      />
+      {/* Leather cross-stitch texture */}
+      <div className="absolute inset-0 leather-texture" />
 
-      {/* Caution stripe — top */}
-      <div className="absolute top-0 left-0 right-0 h-2 caution-stripe-thin" />
+      {/* Warm ambient glow — like a neon sign */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-primary/5 blur-[120px] rounded-full" />
 
-      {/* Heavy diagonal slash marks */}
-      <div className="absolute top-20 right-[12vw] w-[3px] h-[60vh] bg-gradient-to-b from-primary via-primary/20 to-transparent origin-top rotate-12" />
-      <div className="absolute top-20 right-[14vw] w-[3px] h-[40vh] bg-gradient-to-b from-primary/40 to-transparent origin-top rotate-12" />
+      {/* Decorative lines — like guitar strings */}
+      <div className="absolute top-0 right-[20vw] w-px h-[70vh] bg-gradient-to-b from-primary/20 via-primary/5 to-transparent" />
+      <div className="absolute top-0 right-[22vw] w-px h-[50vh] bg-gradient-to-b from-cream/10 to-transparent" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-8 md:px-12 text-center">
-        {/* Location tag — industrial badge */}
+      <div className="relative z-10 max-w-4xl mx-auto px-8 md:px-12 text-center">
+        {/* Location — vintage tag */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.2 }}
-          className="inline-flex items-center gap-3 bg-primary px-5 py-2 mb-10"
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="inline-flex items-center gap-3 border border-primary/30 px-5 py-2 mb-10"
         >
-          <span className="w-2 h-2 bg-black" />
-          <span className="text-xs font-black tracking-[0.25em] uppercase text-black">
+          <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+          <span className="text-xs font-semibold tracking-[0.25em] uppercase text-primary">
             São Paulo — Consolação
           </span>
         </motion.div>
 
-        {/* MASSIVE title */}
+        {/* Title — elegant serif, not screaming */}
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="font-display leading-[0.82] tracking-wider mb-2"
+          transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="font-display leading-[0.9] mb-2"
           style={{ fontSize: 'var(--text-hero)' }}
         >
-          <span className="text-white">BARBEARIA</span>
+          <span className="text-cream italic">Barbearia</span>
         </motion.h1>
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="font-display leading-[0.82] tracking-wider mb-6"
+          transition={{ duration: 0.8, delay: 0.45 }}
+          className="font-display font-black leading-[0.9] mb-8"
           style={{ fontSize: 'var(--text-hero)' }}
         >
-          <span className="text-primary">DOM</span>
+          <span className="text-primary">Dom</span>
         </motion.h1>
 
-        {/* Caution stripe divider */}
+        {/* Ornamental divider */}
         <motion.div
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="w-40 h-[6px] caution-stripe-thin mx-auto mb-8"
-        />
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="flex items-center justify-center gap-3 mb-8"
+        >
+          <span className="w-12 h-px bg-primary/40" />
+          <span className="w-2 h-2 border border-primary/60 rotate-45" />
+          <span className="w-12 h-px bg-primary/40" />
+        </motion.div>
 
-        {/* Tagline — bold, industrial */}
+        {/* Tagline — warm, not aggressive */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.7 }}
-          className="text-xl md:text-2xl font-extrabold tracking-[0.1em] uppercase text-white mb-14"
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="text-lg md:text-xl font-semibold tracking-[0.08em] text-cream/70 italic mb-14"
         >
           {business.tagline}
         </motion.p>
 
-        {/* CTA — hard industrial buttons */}
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.9 }}
+          transition={{ duration: 0.6, delay: 1 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-5"
         >
           <a
             href={waLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-primary text-black px-12 py-5 text-sm font-black tracking-[0.2em] uppercase hover:bg-white transition-all duration-150 hover:scale-105 w-full sm:w-auto text-center"
+            className="bg-primary text-[#0B1622] px-10 py-4 text-sm font-bold tracking-[0.15em] uppercase hover:bg-cream transition-all duration-300 w-full sm:w-auto text-center"
           >
-            Agendar Agora
+            Agendar Horário
           </a>
           <a
             href="#servicos"
-            className="border-3 border-primary text-primary px-12 py-[18px] text-sm font-extrabold tracking-[0.2em] uppercase hover:bg-primary hover:text-black transition-all duration-150 hover:scale-105 w-full sm:w-auto text-center"
-            style={{ borderWidth: '3px' }}
+            className="border border-cream/30 text-cream px-10 py-4 text-sm font-semibold tracking-[0.15em] uppercase hover:border-primary hover:text-primary transition-all duration-300 w-full sm:w-auto text-center"
           >
-            Ver Serviços
+            Nossos Serviços
           </a>
         </motion.div>
       </div>
 
-      {/* Caution stripe — bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-2 caution-stripe-thin" />
-
-      {/* Scroll indicator */}
+      {/* Bottom ornament */}
       <motion.a
         href="#sobre"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 text-primary"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-primary/60 hover:text-primary transition-colors"
       >
         <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.2, repeat: Infinity, ease: 'easeInOut' }}
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
         >
-          <ChevronDown className="w-8 h-8" />
+          <ChevronDown className="w-6 h-6" />
         </motion.div>
       </motion.a>
     </section>

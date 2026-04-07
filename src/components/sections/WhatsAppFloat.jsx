@@ -17,11 +17,11 @@ export function WhatsAppFloat() {
       aria-label="WhatsApp"
     >
       <motion.div
-        animate={{ scale: [1, 1.1, 1] }}
-        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-        className="bg-[#25D366] text-white p-4 shadow-lg shadow-[#25D366]/30 hover:shadow-[#25D366]/50 transition-shadow"
+        animate={{ scale: [1, 1.08, 1] }}
+        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+        className="bg-[#25D366] text-white p-4 shadow-lg shadow-[#25D366]/20 hover:shadow-[#25D366]/40 transition-shadow"
       >
-        <MessageCircle className="w-7 h-7" />
+        <MessageCircle className="w-6 h-6" />
       </motion.div>
     </motion.a>
   )
