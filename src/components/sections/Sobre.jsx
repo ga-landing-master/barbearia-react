@@ -40,12 +40,12 @@ export function Sobre() {
             <AnimateOnView type="fade-up" delay={0.2}>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
                 {business.stats.map((stat) => (
-                  <div key={stat.label} className="text-center border border-primary/10 bg-surface p-4">
-                    <span className="font-display text-4xl md:text-5xl text-primary block mb-1 font-black">
+                  <div key={stat.label} className="text-center border border-primary/10 bg-surface px-3 py-5 overflow-hidden">
+                    <span className="font-display text-3xl md:text-4xl text-primary block mb-2 font-black">
                       {stat.value}
                     </span>
                     <div className="w-4 h-px bg-primary/30 mx-auto mb-2" />
-                    <span className="text-[10px] font-semibold tracking-wider uppercase text-cream/35">
+                    <span className="text-[9px] font-semibold tracking-wider uppercase text-cream/35 leading-tight block">
                       {stat.label}
                     </span>
                   </div>
