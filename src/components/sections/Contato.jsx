@@ -6,9 +6,9 @@ export function Contato() {
   const waLink = `https://wa.me/${business.whatsapp}?text=${encodeURIComponent(business.whatsappMessage)}`
 
   return (
-    <section id="contato" className="relative py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-6">
-        <AnimateOnView type="fade-up" className="text-center mb-16">
+    <section id="contato" className="relative py-32 md:py-40">
+      <div className="max-w-5xl mx-auto px-8 md:px-12">
+        <AnimateOnView type="fade-up" className="text-center mb-20">
           <span className="text-xs tracking-[0.3em] uppercase text-primary mb-4 block">
             Contato
           </span>
@@ -20,10 +20,10 @@ export function Contato() {
           </h2>
         </AnimateOnView>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Info cards */}
           <AnimateOnView type="slide-left">
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div className="flex items-start gap-5 group">
                 <div className="bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors shrink-0">
                   <MapPin className="w-6 h-6 text-primary" />

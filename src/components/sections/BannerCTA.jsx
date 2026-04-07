@@ -5,7 +5,7 @@ export function BannerCTA() {
   const waLink = `https://wa.me/${business.whatsapp}?text=${encodeURIComponent(business.whatsappMessage)}`
 
   return (
-    <section className="relative py-20 md:py-28 overflow-hidden">
+    <section className="relative py-24 md:py-32 overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary-dark via-primary to-primary-light" />
 

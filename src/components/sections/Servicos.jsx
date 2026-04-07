@@ -18,9 +18,9 @@ export function Servicos() {
   const waLink = `https://wa.me/${business.whatsapp}?text=${encodeURIComponent(business.whatsappMessage)}`
 
   return (
-    <section id="servicos" className="relative py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-6">
-        <AnimateOnView type="fade-up" className="text-center mb-16">
+    <section id="servicos" className="relative py-32 md:py-40">
+      <div className="max-w-5xl mx-auto px-8 md:px-12">
+        <AnimateOnView type="fade-up" className="text-center mb-20">
           <span className="text-xs tracking-[0.3em] uppercase text-primary mb-4 block">
             Serviços
           </span>
@@ -33,7 +33,7 @@ export function Servicos() {
         </AnimateOnView>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
           variants={container}
           initial="hidden"
           whileInView="visible"

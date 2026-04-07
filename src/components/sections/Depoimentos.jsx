@@ -16,11 +16,11 @@ const item = {
 
 export function Depoimentos() {
   return (
-    <section id="depoimentos" className="relative py-24 md:py-32 bg-bg-alt">
+    <section id="depoimentos" className="relative py-32 md:py-40 bg-bg-alt">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-6">
-        <AnimateOnView type="fade-up" className="text-center mb-16">
+      <div className="max-w-5xl mx-auto px-8 md:px-12">
+        <AnimateOnView type="fade-up" className="text-center mb-20">
           <span className="text-xs tracking-[0.3em] uppercase text-primary mb-4 block">
             Depoimentos
           </span>
@@ -33,7 +33,7 @@ export function Depoimentos() {
         </AnimateOnView>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
           variants={container}
           initial="hidden"
           whileInView="visible"

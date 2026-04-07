@@ -26,7 +26,7 @@ export function Hero() {
       {/* Diagonal accent line */}
       <div className="absolute top-0 right-0 w-px h-[70vh] bg-gradient-to-b from-primary/40 via-primary/10 to-transparent origin-top-right rotate-12 translate-x-[-20vw]" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-8 md:px-12 text-center">
         {/* Top badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

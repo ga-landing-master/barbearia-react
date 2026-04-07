@@ -5,12 +5,12 @@ import * as Icons from 'lucide-react'
 
 export function Sobre() {
   return (
-    <section id="sobre" className="relative py-24 md:py-32 bg-bg-alt">
+    <section id="sobre" className="relative py-32 md:py-40 bg-bg-alt">
       {/* Accent border top */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-5xl mx-auto px-8 md:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           {/* Left — text */}
           <div>
             <AnimateOnView type="slide-left">
@@ -25,14 +25,14 @@ export function Sobre() {
                 <br />
                 <span className="text-primary">UM RITUAL.</span>
               </h2>
-              <p className="text-muted-foreground leading-relaxed text-lg mb-8">
+              <p className="text-muted-foreground leading-loose text-lg mb-10">
                 {business.description}
               </p>
             </AnimateOnView>
 
             {/* Stats row */}
             <AnimateOnView type="fade-up" delay={0.2}>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
                 {business.stats.map((stat) => (
                   <div key={stat.label} className="text-center">
                     <span className="font-display text-3xl md:text-4xl text-primary block">
@@ -50,7 +50,7 @@ export function Sobre() {
           {/* Right — diferenciais */}
           <div>
             <motion.div
-              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}

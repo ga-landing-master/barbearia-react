@@ -32,7 +32,7 @@ export function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-8 md:px-12 h-20 flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-3">
           <span className="font-display text-3xl tracking-wider text-primary">
             DOM
