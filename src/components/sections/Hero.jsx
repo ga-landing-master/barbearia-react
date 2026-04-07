@@ -10,79 +10,88 @@ export function Hero() {
       id="inicio"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#0f0f0f] to-[#0a0a0a]" />
+      {/* Hard black background */}
+      <div className="absolute inset-0 bg-black" />
 
-      {/* Subtle grid texture */}
+      {/* Visible grid texture */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.07]"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(200,169,97,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(200,169,97,0.3) 1px, transparent 1px)',
-          backgroundSize: '60px 60px',
+            'linear-gradient(rgba(200,169,97,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(200,169,97,0.5) 1px, transparent 1px)',
+          backgroundSize: '50px 50px',
         }}
       />
 
-      {/* Diagonal accent line */}
-      <div className="absolute top-0 right-0 w-px h-[70vh] bg-gradient-to-b from-primary/40 via-primary/10 to-transparent origin-top-right rotate-12 translate-x-[-20vw]" />
+      {/* Bold diagonal slash */}
+      <div className="absolute top-0 right-[15vw] w-[2px] h-[80vh] bg-gradient-to-b from-primary via-primary/30 to-transparent origin-top rotate-12" />
+      <div className="absolute bottom-0 left-[10vw] w-[2px] h-[40vh] bg-gradient-to-t from-primary/50 to-transparent origin-bottom -rotate-12" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-8 md:px-12 text-center">
-        {/* Top badge */}
+        {/* Raw location tag */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 border border-primary/30 px-4 py-1.5 mb-8"
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="inline-flex items-center gap-3 border-2 border-primary/50 px-5 py-2 mb-10"
         >
-          <span className="w-2 h-2 bg-primary rounded-full" />
-          <span className="text-xs tracking-[0.3em] uppercase text-primary">
+          <span className="w-2.5 h-2.5 bg-primary" />
+          <span className="text-xs font-bold tracking-[0.3em] uppercase text-primary">
             São Paulo — Consolação
           </span>
         </motion.div>
 
-        {/* Main title */}
+        {/* Massive title */}
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="font-display leading-[0.9] tracking-wider mb-6"
+          transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="font-display leading-[0.85] tracking-wider mb-4"
           style={{ fontSize: 'var(--text-hero)' }}
         >
-          <span className="text-foreground">BARBEARIA</span>
+          <span className="text-white">BARBEARIA</span>
           <br />
           <span className="text-primary">DOM</span>
         </motion.h1>
 
-        {/* Tagline */}
+        {/* Horizontal razor line */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="w-32 h-[3px] bg-primary mx-auto mb-6"
+        />
+
+        {/* Tagline — bold, not whispered */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-lg md:text-xl tracking-[0.2em] uppercase text-muted-foreground mb-12"
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="text-xl md:text-2xl font-bold tracking-[0.15em] uppercase text-white/80 mb-12"
         >
           {business.tagline}
         </motion.p>
 
-        {/* CTA buttons */}
+        {/* CTA buttons — hard edges, thick borders */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          transition={{ duration: 0.5, delay: 1 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-5"
         >
           <a
             href={waLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-primary text-primary-foreground px-8 py-4 text-sm font-bold tracking-[0.2em] uppercase hover:bg-primary-light transition-colors duration-300 w-full sm:w-auto text-center"
+            className="bg-primary text-black px-10 py-4 text-sm font-black tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-200 hover:scale-105 w-full sm:w-auto text-center"
           >
-            Agende Agora
+            Agendar Agora
           </a>
           <a
             href="#servicos"
-            className="border border-white/20 text-foreground px-8 py-4 text-sm tracking-[0.2em] uppercase hover:border-primary/50 hover:text-primary transition-all duration-300 w-full sm:w-auto text-center"
+            className="border-2 border-white/40 text-white px-10 py-4 text-sm font-bold tracking-[0.2em] uppercase hover:border-primary hover:text-primary transition-all duration-200 hover:scale-105 w-full sm:w-auto text-center"
           >
-            Nossos Serviços
+            Ver Serviços
           </a>
         </motion.div>
       </div>
@@ -93,13 +102,13 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-primary transition-colors"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-primary"
       >
         <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
         >
-          <ChevronDown className="w-6 h-6" />
+          <ChevronDown className="w-7 h-7" />
         </motion.div>
       </motion.a>
     </section>

@@ -1,10 +1,10 @@
 export const business = {
   name: 'Barbearia Dom',
-  tagline: 'Estilo. Atitude. Precisão.',
+  tagline: 'Corte Afiado. Zero Enrolação.',
   description:
-    'A Barbearia Dom é referência em cortes masculinos de alto padrão. Ambiente exclusivo, atendimento personalizado e profissionais que entendem o que significa estilo de verdade.',
+    'Na Dom, homem não fica esperando. Pontualidade, cerveja gelada na mão e barbeiro que sabe o que faz. Sem frescura, sem enrolação — só resultado.',
   whatsapp: '5511999999999',
-  whatsappMessage: 'Olá! Vi o site da Barbearia Dom e gostaria de agendar um horário.',
+  whatsappMessage: 'E aí, quero agendar um horário na Dom.',
   address: 'Rua da Consolação, 1200 — Consolação, São Paulo',
   hours: 'Seg–Sex: 9h às 20h | Sáb: 9h às 18h',
   instagram: '@barbearia.dom',
@@ -14,38 +14,38 @@ export const business = {
   services: [
     {
       icon: 'Scissors',
-      title: 'Corte Masculino',
-      description: 'Corte executado com precisão, adaptado ao formato do rosto e ao seu estilo pessoal.',
+      title: 'Corte na Régua',
+      description: 'Degradê, navalhado, social — do jeito que você manda. Precisão milimétrica.',
       price: 'R$ 60',
     },
     {
       icon: 'Blend',
-      title: 'Barba Completa',
-      description: 'Desenho, alinhamento e hidratação com toalha quente e produtos premium.',
+      title: 'Barba na Navalha',
+      description: 'Toalha quente, navalha afiada, acabamento impecável. Barba de respeito.',
       price: 'R$ 45',
     },
     {
       icon: 'Crown',
-      title: 'Combo Dom',
-      description: 'Corte + barba + sobrancelha. O pacote completo para o homem que não abre mão dos detalhes.',
+      title: 'Combo Bruto',
+      description: 'Corte + barba + sobrancelha. O pacote completo pra quem não faz nada pela metade.',
       price: 'R$ 95',
     },
     {
       icon: 'Flame',
       title: 'Pigmentação',
-      description: 'Cobertura de fios brancos com técnica natural e discreta. Resultado imediato.',
+      description: 'Cabelo branco te incomodando? A gente resolve. Resultado natural, ninguém percebe.',
       price: 'R$ 50',
     },
     {
       icon: 'Sparkles',
       title: 'Limpeza de Pele',
-      description: 'Tratamento facial masculino com esfoliação profunda e hidratação.',
+      description: 'Esfoliação profunda e hidratação. Cuidar da cara não é frescura.',
       price: 'R$ 70',
     },
     {
       icon: 'Zap',
       title: 'Corte Infantil',
-      description: 'Ambiente acolhedor para os pequenos com corte estiloso e rápido.',
+      description: 'Pra molecada ficar estilosa desde cedo. Rápido e sem chororô.',
       price: 'R$ 45',
     },
   ],
@@ -53,48 +53,48 @@ export const business = {
   diferenciais: [
     {
       icon: 'Beer',
-      title: 'Cerveja Gelada',
-      description: 'Cortesia para tornar sua experiência ainda mais relaxante.',
+      title: 'Cerveja na Faixa',
+      description: 'Chegou, sentou, gelou. Cortesia da casa.',
     },
     {
       icon: 'Wifi',
-      title: 'Wi-Fi Premium',
-      description: 'Conexão de alta velocidade para você não desgrudar do trabalho.',
+      title: 'Wi-Fi Potente',
+      description: 'Internet que não trava. Resolve o trampo enquanto espera.',
     },
     {
       icon: 'Tv',
-      title: 'Esportes ao Vivo',
-      description: 'Acompanhe os jogos enquanto cuida do visual.',
+      title: 'Jogão ao Vivo',
+      description: 'Telão ligado nos jogos. Corta o cabelo e não perde o lance.',
     },
     {
       icon: 'Clock',
-      title: 'Pontualidade',
-      description: 'Agendamento com hora marcada. Sem espera, sem enrolação.',
+      title: 'Sem Espera',
+      description: 'Hora marcada é hora marcada. Chegou, sentou na cadeira.',
     },
   ],
 
   testimonials: [
     {
       name: 'Rafael M.',
-      text: 'Melhor barbearia de SP. Ambiente insano, cerveja gelada e o corte sempre perfeito. Não troco por nada.',
+      text: 'Melhor barbearia que já pisei. Cerveja gelada, corte sinistro e os caras não enrolam.',
       rating: 5,
     },
     {
       name: 'Lucas T.',
-      text: 'Primeira vez que saí de uma barbearia me sentindo realmente confiante. Os caras entendem de estilo.',
+      text: 'Fui uma vez e nunca mais larguei. Corte perfeito, ambiente de responsa e atendimento brabo.',
       rating: 5,
     },
     {
       name: 'André P.',
-      text: 'Atendimento pontual, ambiente premium e resultado impecável. Virei cliente fiel.',
+      text: 'Pontualidade absurda, barba afiada e resultado impecável. Aqui é outro nível.',
       rating: 5,
     },
   ],
 
   stats: [
-    { value: '5000+', label: 'Cortes realizados' },
-    { value: '4.9', label: 'Avaliação Google' },
-    { value: '3', label: 'Anos de experiência' },
-    { value: '98%', label: 'Clientes retornam' },
+    { value: '5000+', label: 'Cortes feitos' },
+    { value: '4.9', label: 'Nota no Google' },
+    { value: '3+', label: 'Anos na ativa' },
+    { value: '98%', label: 'Voltam sempre' },
   ],
 }

@@ -21,15 +21,16 @@ export function Servicos() {
     <section id="servicos" className="relative py-32 md:py-40">
       <div className="max-w-5xl mx-auto px-8 md:px-12">
         <AnimateOnView type="fade-up" className="text-center mb-20">
-          <span className="text-xs tracking-[0.3em] uppercase text-primary mb-4 block">
+          <span className="text-xs font-bold tracking-[0.3em] uppercase text-primary mb-4 block">
             Serviços
           </span>
           <h2
-            className="font-display tracking-wider text-foreground"
+            className="font-display tracking-wider text-white"
             style={{ fontSize: 'var(--text-2xl)' }}
           >
-            O QUE <span className="text-primary">OFERECEMOS</span>
+            NA DOM TEM <span className="text-primary">TUDO</span>
           </h2>
+          <div className="w-16 h-[3px] bg-primary mx-auto mt-6" />
         </AnimateOnView>
 
         <motion.div
@@ -43,20 +44,20 @@ export function Servicos() {
             const Icon = Icons[service.icon] || Icons.Star
             return (
               <motion.div key={service.title} variants={item}>
-                <Card className="bg-surface border-white/5 hover:border-primary/30 transition-all duration-300 group h-full">
+                <Card className="bg-surface border-l-4 border-l-primary border-t-0 border-r-0 border-b-0 hover:bg-primary/5 transition-all duration-200 group h-full rounded-none">
                   <CardContent className="p-8">
-                    <div className="flex items-start justify-between mb-6">
-                      <div className="bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors">
+                    <div className="flex items-start justify-between mb-5">
+                      <div className="bg-primary/15 p-3 group-hover:bg-primary/25 transition-colors">
                         <Icon className="w-6 h-6 text-primary" />
                       </div>
-                      <span className="font-display text-2xl text-primary">
+                      <span className="font-display text-3xl text-primary">
                         {service.price}
                       </span>
                     </div>
-                    <h3 className="font-display text-xl tracking-wider text-foreground mb-3">
+                    <h3 className="font-display text-2xl tracking-wider text-white mb-3">
                       {service.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-white/50 leading-relaxed">
                       {service.description}
                     </p>
                   </CardContent>
@@ -67,14 +68,14 @@ export function Servicos() {
         </motion.div>
 
         {/* CTA */}
-        <AnimateOnView type="fade-up" delay={0.3} className="text-center mt-12">
+        <AnimateOnView type="fade-up" delay={0.3} className="text-center mt-16">
           <a
             href={waLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-primary text-primary-foreground px-10 py-4 font-bold text-sm tracking-[0.2em] uppercase hover:bg-primary-light transition-colors"
+            className="inline-block bg-primary text-black px-12 py-5 font-black text-sm tracking-[0.2em] uppercase hover:bg-white transition-all duration-200 hover:scale-105"
           >
-            Agende pelo WhatsApp
+            Agendar pelo WhatsApp
           </a>
         </AnimateOnView>
       </div>

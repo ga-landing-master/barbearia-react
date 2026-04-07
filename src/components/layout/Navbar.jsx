@@ -25,20 +25,20 @@ export function Navbar() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+      transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/5'
+          ? 'bg-black/95 backdrop-blur-md border-b-2 border-primary/20'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-5xl mx-auto px-8 md:px-12 h-20 flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-3">
-          <span className="font-display text-3xl tracking-wider text-primary">
+          <span className="font-display text-4xl tracking-wider text-primary">
             DOM
           </span>
-          <span className="hidden sm:block w-px h-6 bg-white/20" />
-          <span className="hidden sm:block text-xs tracking-[0.3em] uppercase text-muted-foreground">
+          <span className="hidden sm:block w-[2px] h-7 bg-primary/50" />
+          <span className="hidden sm:block text-[10px] font-bold tracking-[0.3em] uppercase text-white/60">
             Barbearia
           </span>
         </a>
@@ -49,7 +49,7 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm tracking-wider uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
+              className="text-xs font-bold tracking-wider uppercase text-white/60 hover:text-primary transition-colors duration-200"
             >
               {link.label}
             </a>
@@ -58,7 +58,7 @@ export function Navbar() {
             href={`https://wa.me/${business.whatsapp}?text=${encodeURIComponent(business.whatsappMessage)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-primary text-primary-foreground px-5 py-2.5 text-sm font-bold tracking-wider uppercase hover:bg-primary-light transition-colors"
+            className="bg-primary text-black px-6 py-2.5 text-xs font-black tracking-wider uppercase hover:bg-white transition-all duration-200 hover:scale-105"
           >
             Agendar
           </a>
@@ -67,10 +67,10 @@ export function Navbar() {
         {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-foreground p-2"
+          className="md:hidden text-white p-2"
           aria-label="Menu"
         >
-          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {open ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
         </button>
       </div>
 
@@ -81,15 +81,15 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#0a0a0a]/95 backdrop-blur-md border-b border-white/5 overflow-hidden"
+            className="md:hidden bg-black/95 backdrop-blur-md border-b-2 border-primary/20 overflow-hidden"
           >
-            <div className="px-6 py-6 flex flex-col gap-4">
+            <div className="px-8 py-8 flex flex-col gap-5">
               {links.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="text-lg tracking-wider uppercase text-muted-foreground hover:text-primary transition-colors"
+                  className="text-lg font-bold tracking-wider uppercase text-white/70 hover:text-primary transition-colors"
                 >
                   {link.label}
                 </a>
@@ -98,7 +98,7 @@ export function Navbar() {
                 href={`https://wa.me/${business.whatsapp}?text=${encodeURIComponent(business.whatsappMessage)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-primary text-primary-foreground px-5 py-3 text-center font-bold tracking-wider uppercase mt-2"
+                className="bg-primary text-black px-6 py-4 text-center font-black tracking-wider uppercase mt-2 hover:bg-white transition-colors"
               >
                 Agendar
               </a>

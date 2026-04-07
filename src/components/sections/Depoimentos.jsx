@@ -17,19 +17,20 @@ const item = {
 export function Depoimentos() {
   return (
     <section id="depoimentos" className="relative py-32 md:py-40 bg-bg-alt">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent" />
 
       <div className="max-w-5xl mx-auto px-8 md:px-12">
         <AnimateOnView type="fade-up" className="text-center mb-20">
-          <span className="text-xs tracking-[0.3em] uppercase text-primary mb-4 block">
+          <span className="text-xs font-bold tracking-[0.3em] uppercase text-primary mb-4 block">
             Depoimentos
           </span>
           <h2
-            className="font-display tracking-wider text-foreground"
+            className="font-display tracking-wider text-white"
             style={{ fontSize: 'var(--text-2xl)' }}
           >
-            O QUE NOSSOS <span className="text-primary">CLIENTES DIZEM</span>
+            QUEM VEM, <span className="text-primary">VOLTA.</span>
           </h2>
+          <div className="w-16 h-[3px] bg-primary mx-auto mt-6" />
         </AnimateOnView>
 
         <motion.div
@@ -41,20 +42,20 @@ export function Depoimentos() {
         >
           {business.testimonials.map((testimonial) => (
             <motion.div key={testimonial.name} variants={item}>
-              <Card className="bg-surface border-white/5 h-full">
+              <Card className="bg-surface border-t-4 border-t-primary border-l-0 border-r-0 border-b-0 h-full rounded-none">
                 <CardContent className="p-8 flex flex-col h-full">
-                  <Quote className="w-8 h-8 text-primary/30 mb-4" />
-                  <p className="text-foreground leading-relaxed mb-6 flex-1">
+                  <Quote className="w-10 h-10 text-primary/60 mb-4" />
+                  <p className="text-white/80 leading-relaxed mb-6 flex-1 text-lg">
                     &ldquo;{testimonial.text}&rdquo;
                   </p>
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between pt-4 border-t border-white/10">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
-                        <span className="font-display text-primary text-lg">
+                      <div className="w-10 h-10 bg-primary flex items-center justify-center">
+                        <span className="font-display text-black text-lg font-bold">
                           {testimonial.name.charAt(0)}
                         </span>
                       </div>
-                      <span className="text-sm font-semibold text-foreground">
+                      <span className="text-sm font-bold text-white">
                         {testimonial.name}
                       </span>
                     </div>
