@@ -6,21 +6,30 @@ export function BannerCTA() {
 
   return (
     <section className="relative py-28 md:py-36 overflow-hidden">
-      {/* Warm leather brown gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-dark via-primary to-primary-dark" />
+      {/* Warm leather gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary to-primary-light" />
+      <div className="absolute inset-0 leather-bg opacity-30" />
 
-      {/* Subtle leather texture */}
-      <div className="absolute inset-0 leather-texture opacity-50" />
-
-      {/* Warm ambient glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[200px] bg-white/5 blur-[100px] rounded-full" />
+      {/* Stitch borders */}
+      <div className="absolute top-4 left-8 right-8 stitch-line opacity-20" />
+      <div className="absolute bottom-4 left-8 right-8 stitch-line opacity-20" />
 
       <div className="relative z-10 max-w-3xl mx-auto px-8 md:px-12 text-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="flex items-center justify-center gap-3 mb-8"
+        >
+          <span className="w-12 h-px bg-[#120C06]/20" />
+          <span className="text-[#120C06]/40 text-xs">★</span>
+          <span className="w-12 h-px bg-[#120C06]/20" />
+        </motion.div>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-display text-[#0B1622] italic"
+          className="font-display text-[#120C06] italic font-normal"
           style={{ fontSize: 'var(--text-2xl)' }}
         >
           Chega de corte
@@ -30,22 +39,17 @@ export function BannerCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="font-display text-cream font-black mb-6"
+          className="font-display text-cream font-black mb-8"
           style={{ fontSize: 'var(--text-2xl)' }}
         >
           meia-boca.
         </motion.h2>
-        <div className="flex items-center justify-center gap-3 mb-8">
-          <span className="w-10 h-px bg-[#0B1622]/30" />
-          <span className="w-2 h-2 border border-[#0B1622]/40 rotate-45" />
-          <span className="w-10 h-px bg-[#0B1622]/30" />
-        </div>
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-[#0B1622]/70 text-lg font-semibold mb-10 max-w-xl mx-auto"
+          className="text-[#120C06]/60 text-lg font-medium italic mb-10 max-w-md mx-auto"
         >
           Agenda aberta. Manda a mensagem e garante teu horário.
         </motion.p>
@@ -57,7 +61,7 @@ export function BannerCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="inline-block bg-[#0B1622] text-primary px-12 py-4 font-bold text-sm tracking-[0.15em] uppercase hover:bg-cream hover:text-[#0B1622] transition-all duration-300"
+          className="inline-block bg-[#120C06] text-primary px-12 py-4 font-bold text-sm tracking-[0.15em] uppercase hover:bg-cream hover:text-[#120C06] transition-all duration-300"
         >
           Fale Conosco
         </motion.a>

@@ -1,8 +1,8 @@
 export const business = {
   name: 'Barbearia Dom',
-  tagline: 'Navalha afiada, blues na caixa.',
+  tagline: 'Navalha afiada. Blues na caixa. Whiskey no copo.',
   description:
-    'A Dom é onde o homem chega, pede uma cerveja, senta na cadeira de couro e sai com o corte que merece. Sem pressa, sem frescura — com blues tocando e navalha na mão.',
+    'Cadeira de couro, blues no som, cerveja gelada e um barbeiro que manja. Na Dom é assim: você senta, relaxa e sai pronto pro que vier. Sem frescura, sem enrolação.',
   whatsapp: '5511999999999',
   whatsappMessage: 'E aí, quero agendar um horário na Dom.',
   address: 'Rua da Consolação, 1200 — Consolação, São Paulo',
@@ -33,7 +33,7 @@ export const business = {
     {
       icon: 'Flame',
       title: 'Pigmentação',
-      description: 'Cabelo branco te incomodando? A gente resolve. Resultado natural.',
+      description: 'Cabelo branco? A gente resolve. Resultado natural, ninguém percebe.',
       price: 'R$ 50',
     },
     {
@@ -53,8 +53,8 @@ export const business = {
   diferenciais: [
     {
       icon: 'Beer',
-      title: 'Cerveja Gelada',
-      description: 'Chegou, sentou, gelou. Cortesia da casa.',
+      title: 'Cerveja & Whiskey',
+      description: 'Na faixa. Escolhe o seu veneno e relaxa.',
     },
     {
       icon: 'Wifi',
@@ -64,29 +64,29 @@ export const business = {
     {
       icon: 'Tv',
       title: 'Jogão ao Vivo',
-      description: 'Telão ligado nos jogos. Corta o cabelo e não perde o lance.',
+      description: 'Telão ligado. Corta o cabelo e não perde o lance.',
     },
     {
       icon: 'Clock',
       title: 'Hora Marcada',
-      description: 'Pontualidade é lei. Chegou no horário, sentou na cadeira.',
+      description: 'Pontualidade é lei aqui. Chegou, sentou na cadeira.',
     },
   ],
 
   testimonials: [
     {
       name: 'Rafael M.',
-      text: 'Melhor barbearia que já pisei. Cerveja gelada, blues tocando e corte sinistro. Virei de casa.',
+      text: 'Parece um bar americano. Cerveja gelada, blues tocando e o corte? Sinistro. Virei de casa.',
       rating: 5,
     },
     {
       name: 'Lucas T.',
-      text: 'Ambiente de responsa, parece um bar americano. E o corte? Impecável toda vez.',
+      text: 'Ambiente de responsa, cadeira de couro, atendimento brabo. Melhor barbearia que já pisei.',
       rating: 5,
     },
     {
       name: 'André P.',
-      text: 'Pontualidade absurda, barba afiada e resultado que fala por si. Aqui é outro nível.',
+      text: 'O cara é cirúrgico na navalha. Barba perfeita toda vez. Aqui é outro nível.',
       rating: 5,
     },
   ],

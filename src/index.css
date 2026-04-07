@@ -5,44 +5,44 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  /* Blues & Leather palette */
-  --color-primary: #C17F3E;
-  --color-primary-light: #D4975A;
-  --color-primary-dark: #9A6530;
-  --color-surface: #142133;
-  --color-bg-alt: #0E1A2B;
-  --color-cream: #F0E6D6;
-  --color-cream-dark: #D4C4A8;
-  --color-blues: #1B3A5C;
-  --color-blues-light: #2A5080;
+  /* Leather & Whiskey palette */
+  --color-primary: #D4874D;
+  --color-primary-light: #E09E6A;
+  --color-primary-dark: #B5651D;
+  --color-surface: #1E1510;
+  --color-bg-alt: #15100B;
+  --color-cream: #E8D5B7;
+  --color-cream-dark: #C4A882;
+  --color-rust: #8B3A1A;
+  --color-brass: #AA8B4E;
 
   --font-display: "Playfair Display", serif;
   --font-body: "Source Sans 3", sans-serif;
 }
 
 :root {
-  --text-hero: clamp(3.5rem, 2.5rem + 7vw, 7.5rem);
-  --text-2xl: clamp(2rem, 1.2rem + 3.5vw, 3.5rem);
+  --text-hero: clamp(4rem, 3rem + 8vw, 8.5rem);
+  --text-2xl: clamp(2.2rem, 1.4rem + 4vw, 4rem);
   --text-xl: clamp(1.5rem, 1.1rem + 1.8vw, 2.25rem);
 
-  --background: #0B1622;
-  --foreground: #F0E6D6;
-  --card: #142133;
-  --card-foreground: #F0E6D6;
-  --popover: #142133;
-  --popover-foreground: #F0E6D6;
-  --primary: #C17F3E;
-  --primary-foreground: #0B1622;
-  --secondary: #1B3A5C;
-  --secondary-foreground: #F0E6D6;
-  --muted: #1B3A5C;
-  --muted-foreground: #8899AA;
-  --accent: #C17F3E;
-  --accent-foreground: #0B1622;
-  --destructive: #dc2626;
-  --border: rgba(193, 127, 62, 0.15);
-  --input: rgba(240, 230, 214, 0.1);
-  --ring: #C17F3E;
+  --background: #120C06;
+  --foreground: #E8D5B7;
+  --card: #1E1510;
+  --card-foreground: #E8D5B7;
+  --popover: #1E1510;
+  --popover-foreground: #E8D5B7;
+  --primary: #D4874D;
+  --primary-foreground: #120C06;
+  --secondary: #2A1F15;
+  --secondary-foreground: #E8D5B7;
+  --muted: #2A1F15;
+  --muted-foreground: #8B7B6B;
+  --accent: #D4874D;
+  --accent-foreground: #120C06;
+  --destructive: #8B3A1A;
+  --border: rgba(212, 135, 77, 0.12);
+  --input: rgba(232, 213, 183, 0.08);
+  --ring: #D4874D;
   --radius: 0px;
 }
 
@@ -59,8 +59,8 @@ body {
 }
 
 ::selection {
-  background-color: #C17F3E;
-  color: #0B1622;
+  background-color: #D4874D;
+  color: #120C06;
 }
 
 ::-webkit-scrollbar {
@@ -68,16 +68,40 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0B1622;
+  background: #120C06;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C17F3E;
+  background: #D4874D;
 }
 
-/* Leather texture overlay */
-.leather-texture {
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C17F3E' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+/* Worn leather texture */
+.leather-bg {
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(212, 135, 77, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(139, 58, 26, 0.04) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D4874D' fill-opacity='0.02'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0V0h2v14h4v-4h2v4h4V2h2v12h4V0h2v14h4v-4h2v4h4V0h2v14h2V0h2v18H20v2.5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Stitch line — like leather stitching */
+.stitch-line {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #D4874D 0px,
+    #D4874D 8px,
+    transparent 8px,
+    transparent 14px
+  );
+  height: 2px;
+}
+
+/* Western star ornament */
+.western-ornament::before {
+  content: '★';
+  color: #D4874D;
+  font-size: 10px;
+  margin: 0 12px;
+  opacity: 0.6;
 }
 
 @theme inline {
@@ -102,10 +126,10 @@ body {
   --color-input: var(--input);
   --color-ring: var(--ring);
   --radius-sm: 0px;
-  --radius-md: 2px;
-  --radius-lg: 4px;
-  --radius-xl: 4px;
-  --radius-2xl: 4px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
 }
 
 @layer base {
